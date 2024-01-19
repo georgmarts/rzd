@@ -1,9 +1,8 @@
-import SearchWidget from "@/components/searchwidget/SearchWidget";
+import SearchWidget from "@/components/SearchWidget/SearchWidget";
 
 export default function Home() {
   return (
     <main>
-      Hello
       <SearchWidget />
     </main>
   );

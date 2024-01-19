@@ -1,0 +1,107 @@
+@use "../../assets/styles/colors.scss";
+
+.search-widget {
+  display: flex;
+  width: 95%;
+  max-width: 1000px;
+  margin: 1rem auto;
+
+  input {
+    padding: 1.2rem;
+    min-width: 0;
+    border: 1px solid lightgrey;
+    border-right: 1px solid transparent;
+    &::placeholder {
+      color: rgba(128, 128, 128, 0.651);
+    }
+    &:focus {
+      outline: 2px solid colors.$red;
+      outline-offset: -0.1rem;
+    }
+  }
+
+  &__input-box-from {
+    position: relative;
+    input {
+      //   height: 100%;
+      width: 100%;
+    }
+    svg {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      transform: translateX(50%);
+      cursor: pointer;
+      background-color: white;
+      &:hover {
+        fill: colors.$red;
+        box-shadow: 0 0 7px -2px black;
+        border-radius: 1rem;
+      }
+    }
+  }
+
+  &__input-box-there {
+    position: relative;
+    input {
+      //   height: 100%;
+      width: 100%;
+    }
+    svg {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      transform: translateX(10%);
+      background-color: white;
+      z-index: 1;
+    }
+  }
+
+  &__input-box-back {
+    position: relative;
+    input {
+      //   height: 100%;
+      width: 100%;
+      border-left: 1px solid transparent;
+    }
+    svg {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      transform: translateX(-70%);
+      cursor: pointer;
+      background: rgb(240, 238, 238);
+      border-radius: 1rem;
+      transition: all ease-in-out 0.1s;
+      &:hover {
+        fill: white;
+        background: colors.$red;
+      }
+    }
+  }
+
+  button {
+    all: unset;
+    cursor: pointer;
+    background-color: colors.$red;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    &:hover {
+      background-color: colors.$dark-red;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  .black-border-on-focus {
+    &:focus {
+      outline: 2px solid black;
+    }
+  }
+}
